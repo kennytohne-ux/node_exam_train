@@ -1,0 +1,181 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    /* border: 1px solid #000; */
+}
+.login{
+    display: flex;
+    height: 100vh;
+    overflow-y: hidden;
+}
+.wImg{
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+.wImg::after{
+    content: '';
+    z-index: 1;
+    position: absolute;
+    background: #00000080;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.wImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.lForm{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 7px;
+    gap: 115px;
+}
+.insideForm{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 50px;
+}
+.lForm .insideForm h2,.insideForm b,
+.logo b{
+    text-align: center;
+    font-weight: 550;
+    font-size: 24px;
+}
+b{
+    color: rgb(63, 147, 243);
+}
+.lForm .insideForm .p{
+    text-align: center;
+    font-size: small;
+    color: rgb(97, 97, 97);
+    padding-bottom: 10px;
+}
+.insideForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.insideForm form .input{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.insideForm form input{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    padding-left: 20px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid rgba(82, 82, 82, 0.596);
+    color: rgba(0, 0, 0, 0.719);
+    transition: .3s;
+}
+.insideForm form a{
+    font-size: 13px;
+    color: rgb(16, 80, 255);
+    font-weight: 700;
+    text-align: center;
+}
+.insideForm form button {
+    height: 45px;
+    background: rgb(16, 80, 255);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .3s;
+}
+.insideForm form button:hover{
+    opacity: .89;
+}
+
+.body{
+    background: hsl(190deg 27.27% 95.69%);
+}
+@media screen and (max-width: 1024px) {
+    .login {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        padding-bottom: 40px;
+    }
+    .wImg {
+        width: 100%;
+    }
+    .lForm {
+        width: 100%;
+        padding-top: 20px;
+        gap: 50px;
+    }
+    .insideForm {
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wImg {
+        display: none;
+    }
+    .lForm {
+        width: 100%;
+    }
+    .insideForm h2, .insideForm b, .logo b {
+        font-size: 20px;
+    }
+    .insideForm b, .logo b {
+        font-size: inherit;
+    }
+    .insideForm {
+        gap: 20px;
+    }
+    .insideForm form input {
+        font-size: 14px;
+        padding: 11px;
+    }
+    .insideForm form button {
+        height: 43px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    .login {
+        padding-bottom: 20px;
+    }
+    .lForm {
+        gap: 30px;
+    }
+    .insideForm h2, .insideForm b, .logo b {
+        font-size: 18px;
+    }
+    .insideForm b, .logo b {
+        font-size: inherit;
+    }
+    .insideForm form input {
+        font-size: 13px;
+    }
+    .insideForm form button {
+        height: 43px;
+        font-size: 12px;
+    }
+}
